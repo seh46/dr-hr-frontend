@@ -33,7 +33,8 @@ class FetchData extends React.Component {
 	}
 
 	DataFromServer = () => {
-		axios.get('http://67.159.95.29:5000/api/heart_rate/' + this.state.nameToSearch).then( (response) => {
+		var URL = 'http://67.159.95.29:5000/api/heart_rate/' + this.state.nameToSearch
+		axios.get(URL).then( (response) => {
 			console.log(response.status);
 			this.setState({"data": response.data});
 			console.log(this.state.data)
@@ -58,6 +59,7 @@ class FetchData extends React.Component {
 
 	render() {
 		var a = this.dataTable();
+		console.log(a)
 		return (
 			<div>
 				<div>
