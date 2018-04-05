@@ -54,8 +54,8 @@ class FetchData extends React.Component {
 				</TableRow>
 			);
 		}
-		return a
 		console.log(a)
+		return a
 	}
 
 	render() {
