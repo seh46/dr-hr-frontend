@@ -52,11 +52,11 @@ class FetchData extends React.Component {
 		var a = this.dataTable();
 		console.log(a)
 		return (
-			<div margin: 1>
-				<div padding: 1>
+			<div margin: 100px>
+				<div padding: 50px>
 					Enter an email address to retrieve the respective user's heart rate measurements.
 				</div>
-				<div padding: 1>
+				<div padding: 50px>
 					<TextField 
 						value={this.state.nameTextField}
 						onChange={this.onNameTextFieldChange}/>
@@ -65,7 +65,7 @@ class FetchData extends React.Component {
 					</Button>
 				</div>
 				<Paper>
-					<Table margin: 1>
+					<Table margin: 100px>
 						<TableHead>
 							<TableRow>
 								<TableCell>Time</TableCell>
