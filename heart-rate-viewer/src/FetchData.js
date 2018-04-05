@@ -55,10 +55,12 @@ class FetchData extends React.Component {
 			);
 		}
 		return a
+		console.log(a)
 	}
 
 	render() {
 		var a = this.dataTable();
+		console.log(a)
 		return (
 			<div>
 				<div>
