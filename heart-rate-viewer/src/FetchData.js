@@ -54,13 +54,11 @@ class FetchData extends React.Component {
 				</TableRow>
 			);
 		}
-		console.log(a)
 		return a
 	}
 
 	render() {
 		var a = this.dataTable();
-		console.log(a)
 		return (
 			<div>
 				<div>
@@ -87,7 +85,8 @@ class FetchData extends React.Component {
 							</TableRow>
 						</TableHead>
 						<TableBody>
-							{a}
+							<TableCell>{this.state.data.time[0]}</TableCell>
+							<TableCell>{this.state.data.hr[0]}</TableCell>
 						</TableBody>
 					</Table>
 				</Paper>
