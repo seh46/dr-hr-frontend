@@ -85,8 +85,7 @@ class FetchData extends React.Component {
 							</TableRow>
 						</TableHead>
 						<TableBody>
-							<TableCell>{this.state.data.time[0]}</TableCell>
-							<TableCell>{this.state.data.hr[0]}</TableCell>
+							{a}
 						</TableBody>
 					</Table>
 				</Paper>
