@@ -12,9 +12,6 @@ class FetchData extends React.Component {
 			"data": {"time": [0], "hr": [0]},
 			"nameTextField": "",
 			"nameToSearch": "",
-			"time": [],
-			"hr": [],
-			"datapairs": [],
 		};
 	}
 
@@ -56,6 +53,9 @@ class FetchData extends React.Component {
 		console.log(a)
 		return (
 			<div>
+				<div>
+					Enter an email address to retrieve the respective user's heart rate measurements.
+				</div>
 				<div>
 					<TextField 
 						value={this.state.nameTextField}
