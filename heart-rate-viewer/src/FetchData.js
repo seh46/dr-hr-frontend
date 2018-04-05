@@ -65,7 +65,6 @@ class FetchData extends React.Component {
 					<Button onClick={this.onButtonClick}>
 						Get Heart Rate Data
 					</Button>
-
 				</div>
 				<Paper>
 					<Table>
@@ -80,6 +79,12 @@ class FetchData extends React.Component {
 						</TableBody>
 					</Table>
 				</Paper>
+				<div>
+					{this.nameToSearch}
+					{this.data}
+					{this.time}
+					{this.hr}
+				</div>
 			</div>
 		)
 	}
