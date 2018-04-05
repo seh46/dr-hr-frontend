@@ -32,7 +32,7 @@ class FetchData extends React.Component {
 	}
 
 	DataFromServer = () => {
-		axios.get("http://67.159.95.29:5000/api/heart_rate/" + this.state.nameToSearch).then( (response) => {
+		axios.get('http://67.159.95.29:5000/api/heart_rate/' + this.state.nameToSearch).then( (response) => {
 			console.log(response.status);
 			this.setState({"data": response.data});
 			var b = JSON.parse(this.state.data);
