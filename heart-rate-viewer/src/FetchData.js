@@ -19,7 +19,6 @@ class FetchData extends React.Component {
 		this.onButtonClick.bind(this)
 		this.DataFromServer.bind(this)
 		this.dataTable.bind(this)
-		//this.FormatDataTable.bind(this)
 	}
 
 	onNameTextFieldChange = (event) => {
@@ -29,6 +28,7 @@ class FetchData extends React.Component {
 	onButtonClick = (event) => {
 		console.log(this.state.nameTextField);
 		this.setState({"nameToSearch": this.state.nameTextField})
+		DataFromServer()
 	}
 
 	DataFromServer = () => {
@@ -39,18 +39,8 @@ class FetchData extends React.Component {
 			this.setState({"time": b.time});
 			this.setState({"hr": b.hr})
 		});
-		//this.FormatDataTable()
+		dataTable()
 	}
-
-	//FormatDataTable = () => {
-		//var datapieces = JSON.parse(this.state.data);
-		//var a = [];
-		//for (var i = 0; i < this.state.time.length; i++) {
-			//a.push([this.state.time[i], this.state.hr[i]]);
-		//}
-		//this.setState({"datapairs": a})
-		//console.log(this.state.datapairs);
-	//}
 
 	dataTable = () => {
 		var a = [];
@@ -75,8 +65,7 @@ class FetchData extends React.Component {
 					<Button onClick={this.onButtonClick}>
 						Get Heart Rate Data
 					</Button>
-				</div>
-				<div onClick={this.DataFromServer}>
+
 				</div>
 				<Paper>
 					<Table>
