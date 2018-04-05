@@ -42,9 +42,23 @@ class FetchData extends React.Component {
 		});
 	}
 
-
+	dataTable = () => {
+		var a = [];
+		for (var i = 0; i < this.state.data.length; i++) {
+			a.push(
+				<TableRow>
+					<TableCell>{this.state.data.time[i]}</TableCell>
+					<TableCell>{this.state.data.hr[i]}</TableCell>
+				</TableRow>
+			);
+			console.log(a)
+		}
+		return a
+	}
 
 	render() {
+		var a = this.dataTable();
+		console.log(a)
 		return (
 			<div>
 				<div>
@@ -71,16 +85,7 @@ class FetchData extends React.Component {
 							</TableRow>
 						</TableHead>
 						<TableBody>
-							var a = [];
-							for (var i = 0; i < this.state.data.length; i++) {
-								a.push(
-									<TableRow>
-										<TableCell>{this.state.data.time[i]}</TableCell>
-										<TableCell>{this.state.data.hr[i]}</TableCell>
-									</TableRow>
-								);
-							}
-							return a
+							{a}
 						</TableBody>
 					</Table>
 				</Paper>
