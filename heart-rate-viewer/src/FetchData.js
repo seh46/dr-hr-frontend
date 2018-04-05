@@ -28,7 +28,7 @@ class FetchData extends React.Component {
 	onButtonClick = (event) => {
 		console.log(this.state.nameTextField);
 		this.setState({"nameToSearch": this.state.nameTextField})
-		DataFromServer()
+		this.DataFromServer()
 	}
 
 	DataFromServer = () => {
@@ -39,7 +39,7 @@ class FetchData extends React.Component {
 			this.setState({"time": b.time});
 			this.setState({"hr": b.hr})
 		});
-		dataTable()
+		this.dataTable()
 	}
 
 	dataTable = () => {
