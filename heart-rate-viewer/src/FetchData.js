@@ -42,8 +42,7 @@ class FetchData extends React.Component {
 		for (var i = 0; i < this.state.data.length; i++) {
 			a.push(
 				<TableRow>
-					<TableCell>{this.state.data.time[i]}</TableCell>
-					<TableCell>{this.state.data.hr[i]}</TableCell>
+					<TableCell>{this.state.data[i]}</TableCell>
 				</TableRow>
 			)
 		}
