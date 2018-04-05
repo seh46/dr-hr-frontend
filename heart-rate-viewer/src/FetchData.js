@@ -9,7 +9,7 @@ class FetchData extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			"data": "",
+			"data": {"time": [0], "hr": [0]},
 			"nameTextField": "",
 			"nameToSearch": "",
 			"time": [],
