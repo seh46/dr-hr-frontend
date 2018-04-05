@@ -9,11 +9,12 @@ class FetchData extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			"data": {time: [], hr: []},
+			"data": "",
 			"nameTextField": "",
 			"nameToSearch": "",
 			"time": [],
 			"hr": [],
+			"datapairs": [],
 		};
 		this.onNameTextFieldChange.bind(this)
 		this.onButtonClick.bind(this)
@@ -35,19 +36,23 @@ class FetchData extends React.Component {
 		axios.get('http://67.159.95.29:5000/api/heart_rate/' + this.state.nameToSearch).then( (response) => {
 			console.log(response.status);
 			this.setState({"data": response.data});
-			this.setState({"time": this.data.time});
-			this.setState({"hr": this.data.hr});
+			var pieces = JSON.parse(this.state.data);
+			var a = [];
+			for (var i = 0; i < pieces.length; i++) {
+				a.push([pieces.time[i], pieces.hr[i]]);
+			}
+			this.setState({"datapairs": a})
+			console.log(this.state.datapairs);
 		});
 		this.dataTable()
 	}
 
 	dataTable = () => {
 		var a = [];
-		for (var i = 0; i < this.state.time.length; i++) {
+		for (var i = 0; i < this.datapairs.length; i++) {
 			a.push(
 				<TableRow>
-					<TableCell>{this.state.time[i]}</TableCell>
-					<TableCell>{this.state.hr[i]}</TableCell>
+					<TableCell>{this.datapairs[i]}</TableCell>
 				</TableRow>
 			)
 		}
