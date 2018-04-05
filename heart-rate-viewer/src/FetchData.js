@@ -36,6 +36,9 @@ class FetchData extends React.Component {
 		axios.get('http://67.159.95.29:5000/api/heart_rate/' + this.state.nameToSearch).then( (response) => {
 			console.log(response.status);
 			this.setState({"data": response.data});
+			console.log(this.state.data)
+			console.log(this.state.data["time"])
+			console.log(this.state.data["hr"])
 		});
 		this.dataTable()
 	}
