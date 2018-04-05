@@ -39,7 +39,7 @@ class FetchData extends React.Component {
 
 	dataTable = () => {
 		var a = [];
-		for (var i = 0; i < this.state.data.time.length; i++) {
+		for (var i = 0; i < this.state.data.length; i++) {
 			a.push(
 				<TableRow>
 					<TableCell>{this.state.data.time[i]}</TableCell>
