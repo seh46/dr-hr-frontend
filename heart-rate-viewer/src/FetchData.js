@@ -38,7 +38,8 @@ class FetchData extends React.Component {
 			this.setState({"data": response.data});
 			console.log(this.state.data)
 			console.log(this.state.data["time"])
-			console.log(this.state.data["hr"])
+			console.log(this.state.data.hr)
+			console.log(this.state.data.hr[1])
 		});
 		this.dataTable()
 	}
