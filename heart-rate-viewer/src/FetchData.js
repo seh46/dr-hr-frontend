@@ -36,23 +36,17 @@ class FetchData extends React.Component {
 		axios.get('http://67.159.95.29:5000/api/heart_rate/' + this.state.nameToSearch).then( (response) => {
 			console.log(response.status);
 			this.setState({"data": response.data});
-			var pieces = JSON.parse(this.state.data);
-			var a = [];
-			for (var i = 0; i < pieces.length; i++) {
-				a.push([pieces.time[i], pieces.hr[i]]);
-			}
-			this.setState({"datapairs": a})
-			console.log(this.state.datapairs);
 		});
 		this.dataTable()
 	}
 
 	dataTable = () => {
 		var a = [];
-		for (var i = 0; i < this.state.datapairs.length; i++) {
+		for (var i = 0; i < this.state.data.length; i++) {
 			a.push(
 				<TableRow>
-					<TableCell>{this.state.datapairs[i]}</TableCell>
+					<TableCell>{this.state.data['time']}</TableCell>
+					<TableCell>{this.state.data['hr']}</TableCell>
 				</TableRow>
 			)
 		}
