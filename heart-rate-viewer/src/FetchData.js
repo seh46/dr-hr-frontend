@@ -52,7 +52,7 @@ class FetchData extends React.Component {
 					<TableCell>{this.state.data.time[i]}</TableCell>
 					<TableCell>{this.state.data.hr[i]}</TableCell>
 				</TableRow>
-			)
+			);
 		}
 		return a
 	}
