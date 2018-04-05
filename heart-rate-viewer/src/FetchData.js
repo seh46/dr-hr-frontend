@@ -41,7 +41,6 @@ class FetchData extends React.Component {
 			console.log(this.state.data.hr)
 			console.log(this.state.data.hr[1])
 		});
-		this.dataTable()
 	}
 
 	dataTable = () => {
