@@ -18,6 +18,7 @@ class FetchData extends React.Component {
 		this.onNameTextFieldChange.bind(this)
 		this.onButtonClick.bind(this)
 		this.DataFromServer.bind(this)
+		this.dataTable.bind(this)
 		//this.FormatDataTable.bind(this)
 	}
 
