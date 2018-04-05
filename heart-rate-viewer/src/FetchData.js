@@ -58,6 +58,7 @@ class FetchData extends React.Component {
 	}
 
 	render() {
+		var a = this.dataTable();
 		return (
 			<div>
 				<div>
@@ -84,7 +85,7 @@ class FetchData extends React.Component {
 							</TableRow>
 						</TableHead>
 						<TableBody>
-							{this.dataTable()}
+							{a}
 						</TableBody>
 					</Table>
 				</Paper>
