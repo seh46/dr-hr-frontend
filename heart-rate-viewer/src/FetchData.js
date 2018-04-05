@@ -80,6 +80,7 @@ class FetchData extends React.Component {
 					</Table>
 				</Paper>
 				<div>
+					{this.nameTextField}
 					{this.nameToSearch}
 					{this.data}
 					{this.time}
