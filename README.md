@@ -15,4 +15,5 @@ npm run start
 
 ## Using the Application
 Type an email address of an existing user in the database into the text field.  Click "GET HEART RATE DATA" and wait for table to be populated.
+
 <img src="dr-hr-frontend_screenshot.JPG" height="300px" />
