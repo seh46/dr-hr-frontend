@@ -1,21 +1,10 @@
-# heart_rate_databases_starter
-Starter codebase for BME590 Databases Assignment (which can be found [here](https://github.com/mlp6/Medical-Software-Design/blob/master/Lectures/databases/main.md#mini-projectassignment)). 
+User interface created using React to interface with database of users and timestamped heart rates.  Allows you to search a user by email address and click a button to display that user's heart rate data in a table.
 
-To get started with this sample code, you first need to get the mongodb program running. To do this, simply run 
-```
-docker run -v $PWD/db:/data/db -p 27017:27017 mongo
-```
 
-either on your local machine (if you have docker installed there) or on a virtual machine you have access to where you can first install docker.
+Setup:
 
-:eyes: if you are running your mongodb database on a virtual machine, you need to replace the `connect` URI string in `main.py`. Replace `localhost` with a VM address, like so:
+pip install -r requirements.txt
 
-```py
-connect("mongodb://vcm-0000.vm.duke.edu:27017/heart_rate_app") # open up connection to db
-```
+npm install axios
 
-once your database is running and your connection string is set, you can run the starter program by running `main.py` after activating your `virtualenv` and installing all the dependencies listed in `requirements.txt`.
-
-```
-python main.py
-```
+npm run start
